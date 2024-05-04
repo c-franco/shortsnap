@@ -1,0 +1,6 @@
+@shortsnap_backend_HostAddress = http://localhost:5165
+
+GET {{shortsnap_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
