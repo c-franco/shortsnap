@@ -1,0 +1,85 @@
+/*  DESCRIPTION */
+.description-container {
+  width: 692px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.text-style {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+}
+
+span {
+  color: #2f55d4;
+  font-weight: 600;
+}
+
+.description-title {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: 600;
+  color: black;
+}
+
+.description-text {
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #8492a6;
+}
+
+/* ITEMS */
+
+.info-container {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.info-item {
+  padding: 16px;
+}
+
+.info-icon {
+  margin-bottom: 8px;
+  color: #2f55d4;
+  font-size: 45px;
+  overflow: visible;
+  height: auto;
+  width: auto;
+}
+
+.info-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #8492a6;
+}
+
+@media (max-width: 1150px) {
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 692px;
+  }
+}
+
+@media (max-width: 750px) {
+  .description-container {
+    width: 80%;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}

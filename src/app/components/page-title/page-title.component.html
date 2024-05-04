@@ -1,0 +1,10 @@
+<div class="align-center title-container">
+  <h1 class="title-container blue-text">{{ title }}</h1>
+  <h3 class="description-container">
+    <ng-container *ngFor="let word of description.split(' '); let i = index">
+      <span [ngClass]="{ 'blue-text': isBlueWord(word) }">
+        {{ word }}
+      </span>
+      <span *ngIf="i < description.split(' ').length - 1"> </span>
+    </ng-container>
+  </h3></div>

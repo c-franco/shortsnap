@@ -1,0 +1,65 @@
+<mat-toolbar class="toolbar-center">
+  <div class="toolbar-item">
+    <mat-button
+      [ngClass]="{ active: activeButton === 'home' }"
+      (click)="setActive('home')"
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      >HOME</mat-button
+    >
+  </div>
+  <div class="toolbar-item">
+    <mat-button
+      [ngClass]="{ active: activeButton === 'unshortenUrl' }"
+      (click)="setActive('unshortenUrl')"
+      routerLink="/unshorten-url"
+      routerLinkActive="active"
+      >UNSHORTEN URL</mat-button
+    >
+  </div>
+  <div class="toolbar-item">
+    <mat-button
+      [ngClass]="{ active: activeButton === 'clickCounter' }"
+      (click)="setActive('clickCounter')"
+      routerLink="/stats"
+      routerLinkActive="active"
+      >URL CLICK COUNTER</mat-button
+    >
+  </div>
+  <div class="toolbar-menu">
+    <button mat-icon-button (click)="toggleMenu()">
+      <mat-icon>{{ menuOpen ? "close" : "menu" }}</mat-icon>
+    </button>
+  </div>
+  <div class="toolbar-menu-items" *ngIf="isVisible">
+    <div
+      class="toolbar-menu-item"
+      [ngClass]="{ active: activeButton === 'home' }"
+      (click)="setActive('home')"
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+    >
+      HOME
+    </div>
+    <div
+      class="toolbar-menu-item"
+      [ngClass]="{ active: activeButton === 'unshortenUrl' }"
+      (click)="setActive('unshortenUrl')"
+      routerLink="/unshorten-url"
+      routerLinkActive="active"
+    >
+      UNSHORTEN URL
+    </div>
+    <div
+      class="toolbar-menu-item"
+      [ngClass]="{ active: activeButton === 'clickCounter' }"
+      (click)="setActive('clickCounter')"
+      routerLink="/stats"
+      routerLinkActive="active"
+    >
+      URL CLICK COUNTER
+    </div>
+  </div>
+</mat-toolbar>

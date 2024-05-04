@@ -1,0 +1,37 @@
+<div class="result-container" *ngIf="urlResponseDto">
+  <div class="left-container">
+    <div class="upper-container">
+      {{ urlResponseDto?.upperUrl }}
+    </div>
+    <div class="lower-container">
+      <a [href]="urlResponseDto?.lowerUrl" target="_blank">{{
+        urlResponseDto?.lowerUrl
+      }}</a>
+    </div>
+  </div>
+  <div class="right-container" *ngIf="!stats">
+    <mat-icon
+      class="icon-style stats"
+      (click)="
+        unshort
+          ? redirectToStats(urlResponseDto?.upperUrl)
+          : redirectToStats(urlResponseDto?.lowerUrl)
+      "
+      >bar_chart</mat-icon
+    >
+    <mat-icon
+      class="icon-style copy"
+      (click)="copyToClipboard(urlResponseDto?.lowerUrl)"
+      >content_copy</mat-icon
+    >
+  </div>
+  <div class="clicks-container" *ngIf="stats">
+    <p>
+      Clicks: <span>{{ urlResponseDto?.clickCounter }}</span>
+    </p>
+  </div>
+</div>
+
+<div class="alert-container">
+  <p class="alert-text" *ngIf="urlResponseDto && copied">Short URL copied</p>
+</div>
