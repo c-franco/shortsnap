@@ -1,0 +1,14 @@
+<div class="form-container">
+  <form (submit)="onSubmit(form.value)" [formGroup]="form">
+    <input
+      matInput
+      formControlName="url"
+      type="text"
+      class="form-input"
+      [(ngModel)]="inputUrl"
+      name="url"
+      placeholder="Enter your link here"
+    />
+    <button type="submit" class="form-button">{{buttonText}}</button>
+  </form>
+</div>

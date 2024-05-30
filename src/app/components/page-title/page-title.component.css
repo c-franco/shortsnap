@@ -1,0 +1,33 @@
+.align-center {
+  text-align: center;
+}
+
+.title-container {
+  margin-top: 4rem;
+  font-size: 40px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+
+.description-container {
+  margin-top: 1.2rem;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  color: #8492a6;
+}
+
+.blue-text {
+  color: #2f55d4;
+}
+
+@media (max-width: 750px) {
+  .title-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

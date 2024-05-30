@@ -1,0 +1,76 @@
+<div class="description-container">
+  <h2 class="description-title text-style">{{ title }}</h2>
+  <p class="description-text text-style" *ngIf="description == 'home'">
+    ShortSnap transforms lengthy links into compact, easy-to-share URLs.
+    <span>Simply paste the long URL</span> and click the button to
+    <span>shorten it</span>. Then, copy the shortened URL and share it on social
+    media, chats, or emails. Additionally, you can track the number of clicks
+    received to see how your content is performing.
+    <span>Shorten, share, and track your links</span> with ShortSnap to optimize
+    your content's visibility.
+  </p>
+
+  <p class="description-text text-style" *ngIf="description == 'unshorten'">
+    With ShortSnap's Unshorten URL, discover the original URL hidden behind a
+    shortened link. Simply paste the shortened URL and
+    <span>get the full destination URL</span>. This feature allows you to verify
+    and confirm the destination of a link before clicking. With Unshorten URL,
+    <span>browse safely and securely</span>, protecting your online privacy.
+  </p>
+
+  <p class="description-text text-style" *ngIf="description == 'stats'">
+    ShortSnap's URL Click Counter provides <span>insights</span> into how your
+    links are performing. Easily track the <span>number of clicks</span> and
+    measure user interest. Stay tuned for additional metrics and analytics to
+    further enhance your understanding of link engagement.
+  </p>
+</div>
+
+<div class="info-container text-style" *ngIf="description == 'home'">
+  <div class="info-item">
+    <mat-icon class="info-icon">thumb_up_off_alt</mat-icon>
+    <h3 class="info-title text-style">Easy To Use</h3>
+    <p class="info-text text-style">
+      Convert long URLs into short, shareable links in one click.
+    </p>
+  </div>
+
+  <div class="info-item text-style">
+    <mat-icon class="info-icon">content_cut</mat-icon>
+    <h3 class="info-title text-style">Trim</h3>
+    <p class="info-text text-style">
+      ShortURL simplifies sharing by shortening links of any length.
+    </p>
+  </div>
+  <div class="info-item text-style">
+    <mat-icon class="info-icon">lock_outline</mat-icon>
+    <h3 class="info-title text-style">Secure</h3>
+    <p class="info-text text-style">
+      Experience fast and secure service with HTTPS protocol and encrypted data.
+    </p>
+  </div>
+  <div class="info-item text-style">
+    <mat-icon class="info-icon">trending_up</mat-icon>
+    <h3 class="info-title text-style">Track</h3>
+    <p class="info-text text-style">
+      Monitor the number of clicks your shortened URL receives and stay informed
+      about your content's engagement.
+    </p>
+  </div>
+  <div class="info-item text-style">
+    <mat-icon class="info-icon">undo</mat-icon>
+    <h3 class="info-title text-style">Unshort</h3>
+    <p class="info-text text-style">
+      Expand shortened URLs back to their full original link to check for
+      security and context before you click.
+    </p>
+  </div>
+  <div class="info-item text-style">
+    <mat-icon class="info-icon">money_off</mat-icon>
+    <h3 class="info-title text-style">Free</h3>
+    <p class="info-text text-style">
+      Get endless link shortening and redirecting. ShortSnap works seamlessly on
+      mobile, tablet and desktop.
+    </p>
+  </div>
+</div>

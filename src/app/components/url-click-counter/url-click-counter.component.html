@@ -1,0 +1,22 @@
+<div class="container">
+  <app-menu></app-menu>
+
+  <app-page-title
+    [title]="'URL Click Counter'"
+    [description]="'View the number of clicks a shortened link has received.'"
+  ></app-page-title>
+
+  <app-url-form
+    [action]="'stats'"
+    (OnSubmit)="showStats($event)"
+    [inputUrl]="inputUrl"
+  ></app-url-form>
+
+  <app-url-result [urlResponseDto]="statsUrl" [stats]="true"></app-url-result>
+
+  <app-info
+    [title]="'What is Url Click Counter?'"
+    [description]="'stats'"
+  ></app-info>
+</div>
+<app-footer></app-footer>
