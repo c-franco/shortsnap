@@ -20,12 +20,29 @@ builder.Services.AddSwaggerGen();
 //    });
 //});
 
-builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+//builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+//{
+//    builder.AllowAnyOrigin()
+//           .AllowAnyMethod()
+//           .AllowAnyHeader();
+//}));
+
+builder.Services.AddCors(options =>
 {
-    builder.AllowAnyOrigin()
-           .AllowAnyMethod()
-           .AllowAnyHeader();
-}));
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("https://shortsnap.vercel.app")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<UrlShortenerManager>();
 
@@ -40,9 +57,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("AllowAllOrigins");
 }
-
-app.UseCors("MyPolicy");
+else
+{
+    app.UseCors("AllowSpecificOrigin");
+}
 
 app.UseHttpsRedirection();
 
