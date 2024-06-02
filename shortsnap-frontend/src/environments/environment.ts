@@ -1,1 +1,1 @@
-export const environment = { apiURL: 'https://shortsnap.runasp.net' };
+export const environment = { apiURL: 'http://localhost:5165' };
