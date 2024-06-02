@@ -104,6 +104,10 @@
     margin-right: 15px;
   }
 
+  .lower-container {
+    font-size: 17px;
+  }
+
   .left-container,
   .right-container {
     width: 100%;
