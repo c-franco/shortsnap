@@ -11,11 +11,11 @@
 
 <p align="center">
   <a href="https://shortsnap.vercel.app/">Website</a> •
-  <a href="#key-features">Key Features</a> •
-  <a href="#getting-started">Getting started</a> •
-  <a href="#stack">Stack</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#license">License</a>
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-key-features">Key Features</a> •
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#%EF%B8%8F-getting-started">Getting started</a> •
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-stack">Stack</a> •
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-contribute">Contribute</a> •
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-license">License</a>
 </p>
 
 <img src="shortsnap-frontend/src/shortsnap.webp" alt="ShortSnap">
@@ -42,6 +42,7 @@ $ cd shortsnap
 ```
 
 ### Back-end Setup:
+
 ```bash
 # Navigate to the folder
 $ cd shortsnap-backend
@@ -54,7 +55,9 @@ $ dotnet restore
 # Run the application
 $ dotnet run
 ```
+
 ### Front-end Setup:
+
 ```bash
 # Navigate to the folder
 $ cd ../shortsnap-frontend
@@ -65,6 +68,7 @@ $ npm install
 # Run the application
 $ ng serve -o
 ```
+
 Once the frontend and backend are started, open your browser and navigate to http://localhost:4200 to view the application.
 
 ## 📚 Stack
