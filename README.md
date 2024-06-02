@@ -22,7 +22,7 @@
 
 ## 🚀 Key Features
 
-- Fast and lightweight.
+- Fast and lightweight API.
 - Instantly shorten URLs with minimal delay.
 - Easily retrieve original URLs from shortened links.
 - Transparent and open source development.
