@@ -14,7 +14,7 @@
   <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-key-features">Key Features</a> •
   <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#%EF%B8%8F-getting-started">Getting started</a> •
   <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-stack">Stack</a> •
-  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-contribute">Contribute</a> •
+  <a href="https://github.com/c-franco/shortsnap?tab=readme-ov-file#-contribute">Contribute</a>
 </p>
 
 <img src="shortsnap-frontend/src/shortsnap.webp" alt="ShortSnap">
