@@ -58,7 +58,12 @@ namespace shortsnap_backend.Controllers
         [HttpPost("shortener")]
         public async Task<ActionResult<ShortUrlResponseDTO>> Post([FromBody] UrlDTO urlDto)
         {
-            if(!Uri.TryCreate(urlDto.LongUrl, UriKind.Absolute, out var result))
+            if (!urlDto.LongUrl.StartsWith("http://") && !urlDto.LongUrl.StartsWith("https://"))
+            {
+                urlDto.LongUrl = "http://" + urlDto.LongUrl;
+            }
+
+            if (!Uri.TryCreate(urlDto.LongUrl, UriKind.Absolute, out var result))
             {
                 return NoContent();
             }
