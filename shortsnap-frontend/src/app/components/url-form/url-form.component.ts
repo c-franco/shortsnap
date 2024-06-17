@@ -43,7 +43,14 @@ export class UrlFormComponent implements OnInit {
     }
   }
 
+  validUrl(url: string): boolean {
+    const urlRegex =
+      /^(http:\/\/|https:\/\/)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[\w-]*)*(\?.*)?(#.*)?$/;
+    return urlRegex.test(url) ? true : false;
+  }
+
   onSubmit(url: UrlDTO) {
+    //if (this.validUrl(this.inputUrl)) {
     if (this.action == 'shorten') {
       this.shortenUrl(url);
     } else if (this.action == 'unshorten') {
@@ -51,6 +58,7 @@ export class UrlFormComponent implements OnInit {
     } else if (this.action == 'stats') {
       this.getUrlInfo(url);
     }
+    //}
   }
 
   shortenUrl(url: UrlDTO) {
