@@ -60,7 +60,7 @@ namespace shortsnap_backend.Controllers
         {
             if (!urlDto.LongUrl.StartsWith("http://") && !urlDto.LongUrl.StartsWith("https://"))
             {
-                urlDto.LongUrl = "http://" + urlDto.LongUrl;
+                urlDto.LongUrl = "https://" + urlDto.LongUrl;
             }
 
             if (!Uri.TryCreate(urlDto.LongUrl, UriKind.Absolute, out var result))
